@@ -1,2 +1,5 @@
 .page {
+  background: linear-gradient(to bottom, #0d0d0d, #1f012a);
+  height: 100vh;
+  font-family: Creepster;
 }
