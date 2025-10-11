@@ -26,16 +26,18 @@
         </nav>
       </header>
       <main class="main">
-        <section class="event-cards-section">
+        <section class="event-cards">
           <ul class="event-cards-list">
-            <li class="event-card">
-              <img src="" alt="" class="event-card__image" />
-              <div class="event-card__info">
-                <p class="event-card__info-title"></p>
-                <p class="event-card__info-time"></p>
-                <p class="event-card__info-location"></p>
-              </div>
-            </li>
+            <template class="event-card-template">
+              <li class="event-card">
+                <img src="#" alt="#" class="event-card__image" />
+                <div class="event-card__info">
+                  <p class="event-card__info-title"></p>
+                  <p class="event-card__info-description"></p>
+                  <p class="event-card__info-time"></p>
+                </div>
+              </li>
+            </template>
           </ul>
         </section>
       </main>
@@ -69,6 +71,25 @@
         </div>
         <p class="footer_copyright">&copy; OctCodeJam</p>
       </footer>
+      <div class="modal" id="card-modal">
+        <div class="modal__container modal__container_card">
+          <div class="modal__card-wrapper">
+            <button
+              type="button"
+              class="modal__close-button modal__close-button_card"
+            ></button>
+            <img src="#" alt="#" class="modal-card__image" />
+            <div class="modal-card__details">
+              <div class="modal-card__info">
+                <p class="modal-card__info-title"></p>
+                <p class="modal-card__info-description"></p>
+                <p class="modal-card__info-time"></p>
+              </div>
+              <button class="modal-card__save-btn">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script type="module" src="/main.js"></script>
   </body>
