@@ -1,8 +1,17 @@
 .header {
+  color: #ff7518;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo-container {
+  display: flex;
 }
 
 .header__logo {
 }
 
 .header__title {
+  /* color: #ff7518; */
+  font-size: 24px;
 }

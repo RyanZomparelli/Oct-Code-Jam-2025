@@ -2,7 +2,12 @@
 }
 
 .nav__links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
 }
 
 .nav__link {
+  text-decoration: none;
+  color: #ff7518;
 }
