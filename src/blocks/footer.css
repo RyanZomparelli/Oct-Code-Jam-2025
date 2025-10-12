@@ -32,6 +32,8 @@
   color: #17eea6;
 }
 
-.footer__coyright {
-  /*make orange*/
+.footer__copyright {
+  margin: 10px 0 0;
+  text-align: center;
+  color: #ff7518;
 }
