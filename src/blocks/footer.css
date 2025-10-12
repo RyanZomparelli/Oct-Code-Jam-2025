@@ -1,32 +1,37 @@
 .footer {
+  color: white;
 }
 
 .footer__content {
-}
-
-.footer__contact-container {
-}
-
-.footer__contacts {
-}
-
-.footer__contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer__contact-title {
+  text-align: center;
+  /*make orange*/
+}
+
+.footer__contacts {
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  /*make zombie (light)green*/
 }
 
 .footer__link {
+  color: #0a6e4d;
 }
 
-.footer__code-used {
-}
-
-.footer__code-name {
-}
-
-.footer__code-title {
+.footer__link:hover {
+  cursor: pointer;
+  color: #17eea6;
 }
 
 .footer__coyright {
+  /*make orange*/
 }
