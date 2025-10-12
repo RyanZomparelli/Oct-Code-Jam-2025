@@ -4,10 +4,17 @@
 .nav__links {
   display: flex;
   list-style: none;
-  gap: 20px;
+  gap: 30px;
 }
 
 .nav__link {
   text-decoration: none;
   color: white;
+  font-size: 40px;
+  transition: 0.2s ease-out;
+}
+
+.nav__link:hover {
+  opacity: 0.5;
+  transition: 0.2s ease-in;
 }
