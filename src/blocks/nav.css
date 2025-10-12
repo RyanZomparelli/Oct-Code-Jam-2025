@@ -18,3 +18,21 @@
   opacity: 0.5;
   transition: 0.2s ease-in;
 }
+
+@media screen and (max-width: 800px) {
+  .nav__link {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 655px) {
+  .nav__link {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .nav__link {
+    font-size: 16px;
+  }
+}

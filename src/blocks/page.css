@@ -12,3 +12,15 @@
   padding: 0 40px;
   min-height: 100vh;
 }
+
+@media screen and (max-width: 800px) {
+  .page-content {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .page-content {
+    padding: 0;
+  }
+}
