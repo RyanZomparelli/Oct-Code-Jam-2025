@@ -1,5 +1,12 @@
 .page {
   background: linear-gradient(to bottom, #0d0d0d, #1f012a);
-  height: 100vh;
+  min-height: 100vh;
   font-family: Creepster;
+}
+
+.page-content {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 40px;
+  min-height: 100vh;
 }
