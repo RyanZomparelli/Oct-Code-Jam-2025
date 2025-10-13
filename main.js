@@ -57,6 +57,15 @@ getEvents(events);
 
 //Modal open/close functions
 
+//Handle keydown event Escape close
+function handleKeyDown(e) {
+  modals.forEach((modal) => {
+    if (e.key === "Escape") {
+      closeModal(modal);
+    }
+  });
+}
+
 modals.forEach((modal) => {
   modal.addEventListener("click", function (evt) {
     if (
@@ -68,17 +77,20 @@ modals.forEach((modal) => {
   });
 });
 
+// Serves as a snapshot of the open modal at the time when the event data gets
+// passed to the openModal function.
 let currentEvent;
 
 function openModal(modal, eventdata) {
   modal.classList.add("modal_is-opened");
   currentEvent = eventdata;
   saveEventBtn.addEventListener("click", handleSave);
+  document.addEventListener("keydown", handleKeyDown);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
-  document.removeEventListener("keydown", closeModalEscapeKey);
+  document.removeEventListener("keydown", handleKeyDown);
   saveEventBtn.removeEventListener("click", handleSave);
 }
 
