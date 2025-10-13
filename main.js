@@ -41,7 +41,8 @@ function getEvents(data) {
       modalTitle.textContent = event.title;
       modalTime.textContent = event.time;
       modalDescription.textContent = event.description;
-      openModal(cardModal);
+      // Pass event data to openModal
+      openModal(cardModal, event);
     });
 
     modalDeleteBtn.addEventListener("click", () => {
@@ -67,11 +68,47 @@ modals.forEach((modal) => {
   });
 });
 
-function openModal(modal) {
+let currentEvent;
+
+function openModal(modal, eventdata) {
   modal.classList.add("modal_is-opened");
+  currentEvent = eventdata;
+  saveEventBtn.addEventListener("click", handleSave);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
   document.removeEventListener("keydown", closeModalEscapeKey);
+  saveEventBtn.removeEventListener("click", handleSave);
+}
+
+// My Events
+
+const saveEventBtn = document.querySelector(".modal-card__save-btn");
+
+function handleSave() {
+  saveEvent(currentEvent);
+  alert("Event saved successfully!");
+  closeModal(cardModal);
+}
+
+function saveEvent(event) {
+  // Prevent duplicates
+  // Get the currently saved items from local storage.
+  // If there are no items getItem return null so the empty array ensures we always have
+  // an empty array to work with and we can use array methods like .some().
+  const saved = JSON.parse(localStorage.getItem("savedEvents")) || [];
+
+  // See if the title from our event matches any title already in local storage.
+  const exists = saved.some((events) => events.title === event.title);
+
+  // If the event doesn't exist in local storage save it.
+  if (!exists) {
+    // Add the event to the saved array from above.
+    saved.push(event);
+    // Using the setItem method on the global localStorage object.
+    // It only takes strings and saves a json object like this:
+    // '{'savedEvents': 'event'}'
+    localStorage.setItem("savedEvents", JSON.stringify(saved));
+  }
 }
