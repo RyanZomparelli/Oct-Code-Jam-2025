@@ -53,3 +53,16 @@
   margin: 0;
   padding-top: 10px;
 }
+
+.event-filter__matches {
+  padding: 0;
+}
+
+@media screen and (max-width: 510px) {
+  .event-cards-list {
+    grid-template-columns: 1fr;
+  }
+  .event-card__image {
+    height: 175px;
+  }
+}
