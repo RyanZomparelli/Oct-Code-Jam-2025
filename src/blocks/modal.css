@@ -47,6 +47,7 @@
 .modal-card__image {
   width: 100%;
   height: auto;
+  max-height: 60vh;
   object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
