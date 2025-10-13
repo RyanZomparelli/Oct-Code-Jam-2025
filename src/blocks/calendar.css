@@ -1,0 +1,70 @@
+.calendar__container {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to bottom, #0d0d0d, #1f012a);
+}
+
+.calendar {
+  height: 1000px;
+  width: 100vh;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: system-ui, sans-serif;
+  overflow: hidden;
+}
+
+.calendar__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: purple;
+  color: orangered;
+  padding: 5px 10px;
+}
+
+.calendar__days {
+  background-image: url(./imgs/spiderweb.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.calendar__empty-day {
+  background-image: url(./imgs/spiderweb.jpg);
+  background-repeat: no-repeat;
+
+  background-size: contain;
+}
+
+.calendar__weekdays,
+.calendar__days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  border: solid 1px;
+}
+
+.calendar__weekdays {
+  font-weight: bold;
+  padding: 10px 30px;
+  background-color: purple;
+}
+
+.calendar__day {
+  height: 150px;
+  color: orangered;
+  padding: 15px 30px;
+  background-color: purple;
+  cursor: pointer;
+  transition: background 0.3s;
+  border: solid 1px black;
+}
+
+.calendar__day:hover {
+  background: #e0e0ff;
+}
+
+.calendar__today {
+  background: rgb(27, 213, 17);
+  color: #fff;
+}
