@@ -1,4 +1,4 @@
-import "./index.css";
+import "./src/blocks/index.css";
 import { events } from "./src/utils/eventdata";
 // import getEvents from "./src/utils/api";
 

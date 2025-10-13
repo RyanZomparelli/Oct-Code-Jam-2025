@@ -3,12 +3,13 @@ import { resolve } from "path";
 
 export default {
   plugins: [Inspect()],
+  root: ".",
   build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "./index.html"),
-        calendar: resolve(__dirname, "./calendar/calendar.html"),
-        myEvents: resolve(__dirname, "./myevents/myevents.html"),
+        home: resolve(__dirname, "./index.html"),
+        calendar: resolve(__dirname, "src/pages/calander/calendar.html"),
+        myEvents: resolve(__dirname, "src/pages/myevents/myevents.html"),
       },
     },
   },
