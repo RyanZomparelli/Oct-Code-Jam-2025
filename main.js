@@ -21,9 +21,17 @@ const modalDescription = cardModal.querySelector(
 const filter = document.querySelector(".event-filter");
 
 function handleMatch(e) {
-  const inputValue = document
-    .querySelector(".event-filter")
-    .value.toLowerCase();
+  const inputValue = filter.value.toLowerCase();
+
+  const matches = events.filter((event) =>
+    event.title.toLowerCase().includes(inputValue)
+  );
+  renderMatches(matches);
+}
+
+function renderMatches(matches) {
+  cardsContainer.innerHTML = "";
+  getEvents(matches);
 }
 
 filter.addEventListener("input", handleMatch);
