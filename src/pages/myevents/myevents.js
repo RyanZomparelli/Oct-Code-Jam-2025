@@ -1,3 +1,5 @@
+import "../../blocks/index.css";
+
 const template = document.querySelector(".event-card-template");
 const savedContainer = document.querySelector(".event-cards-list");
 const savedEvents = JSON.parse(localStorage.getItem("savedEvents")) || [];

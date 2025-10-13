@@ -1,3 +1,5 @@
+import "../../blocks/index.css";
+
 const daysContainer = document.getElementById("calendar-days");
 const monthYear = document.getElementById("month-year");
 const dayTemplate = document.getElementById("day-template");
