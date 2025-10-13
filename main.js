@@ -9,7 +9,7 @@ const cardsContainer = document.querySelector(".event-cards-list");
 //Modal variables
 const modals = document.querySelectorAll(".modal");
 const cardModal = document.querySelector("#card-modal");
-const modalDeleteBtn = cardModal.querySelector(".modal__close-button");
+const modalCloseBtn = cardModal.querySelector(".modal__close-button");
 const modalImage = cardModal.querySelector(".modal-card__image");
 const modalTitle = cardModal.querySelector(".modal-card__info-title");
 const modalTime = cardModal.querySelector(".modal-card__info-time");
@@ -72,7 +72,7 @@ function getEvents(data) {
       openModal(cardModal, event);
     });
 
-    modalDeleteBtn.addEventListener("click", () => {
+    modalCloseBtn.addEventListener("click", () => {
       closeModal(cardModal);
     });
 

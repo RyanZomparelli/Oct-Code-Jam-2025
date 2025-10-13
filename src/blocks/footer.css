@@ -1,5 +1,6 @@
 .footer {
   color: white;
+  padding-bottom: 20px;
 }
 
 .footer__content {
@@ -11,6 +12,7 @@
 
 .footer__contact-title {
   text-align: center;
+  margin: 0;
   /*make orange*/
 }
 
@@ -33,7 +35,7 @@
 }
 
 .footer__copyright {
-  margin: 10px 0 0;
+  margin: 5px 0 0 0;
   text-align: center;
   color: #ff7518;
 }
