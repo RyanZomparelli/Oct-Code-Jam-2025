@@ -5,6 +5,7 @@
   display: flex;
   list-style: none;
   gap: 30px;
+  padding: 0;
 }
 
 .nav__link {
@@ -32,6 +33,10 @@
 }
 
 @media screen and (max-width: 510px) {
+  .nav__links {
+    gap: 20px;
+  }
+
   .nav__link {
     font-size: 16px;
   }
