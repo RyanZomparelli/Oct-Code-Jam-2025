@@ -3,6 +3,7 @@
 @import url(./src/blocks/page.css);
 @import url(./src/blocks/header.css);
 @import url(./src/blocks/nav.css);
+@import url(./src/blocks/maincontent.css);
 @import url(./src/blocks/cards.css);
 @import url(./src/blocks/footer.css);
 @import url(./src/blocks/modal.css);

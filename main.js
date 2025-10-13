@@ -17,7 +17,26 @@ const modalDescription = cardModal.querySelector(
   ".modal-card__info-description"
 );
 
+//Filtering Functions
+const filter = document.querySelector(".event-filter");
+
+function handleMatch(e) {
+  const inputValue = document
+    .querySelector(".event-filter")
+    .value.toLowerCase();
+}
+
+filter.addEventListener("input", handleMatch);
+
 //Card Functions
+//Sort events by date
+const sortedEvents = [...events].sort((a, b) => {
+  const aDate = new Date(a.time);
+  const bDate = new Date(b.time);
+  return aDate - bDate;
+});
+
+//Render cards
 function getEvents(data) {
   data.forEach((event) => {
     const eventElement = cardTemplate.content
@@ -53,7 +72,7 @@ function getEvents(data) {
   });
 }
 
-getEvents(events);
+getEvents(sortedEvents);
 
 //Modal open/close functions
 

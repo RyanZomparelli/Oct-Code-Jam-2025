@@ -8,6 +8,12 @@ if (savedEvents.length === 0) {
   savedContainer.appendChild(message);
 }
 
+const sortedEvents = [...savedEvents].sort((a, b) => {
+  const aDate = new Date(a.time);
+  const bDate = new Date(b.time);
+  return aDate - bDate;
+});
+
 function getEvents(data) {
   data.forEach((event) => {
     const eventElement = template.content
@@ -28,4 +34,4 @@ function getEvents(data) {
   });
 }
 
-getEvents(savedEvents);
+getEvents(sortedEvents);
