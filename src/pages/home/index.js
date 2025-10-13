@@ -1,5 +1,5 @@
 import "../../blocks/index.css";
-import { events } from "./src/utils/eventdata";
+import { events } from "../../utils/eventdata";
 // import getEvents from "./src/utils/api";
 
 //Card variables
