@@ -1,4 +1,5 @@
 .modal {
+  display: none;
   visibility: hidden;
   position: fixed;
   inset: 0;
