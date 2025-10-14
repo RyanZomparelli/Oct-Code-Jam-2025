@@ -10,7 +10,7 @@
 .event-cards-list {
   list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 350px));
   margin: 0;
   padding: 0;
   gap: 20px;

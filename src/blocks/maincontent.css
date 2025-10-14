@@ -5,6 +5,10 @@
   flex-direction: column;
 }
 
+.main__my-events {
+  padding: 0 90px;
+}
+
 .event-filter {
   border-radius: 8px;
   border: none;
