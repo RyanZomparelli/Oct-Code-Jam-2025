@@ -7,7 +7,6 @@ const savedEvents = JSON.parse(localStorage.getItem("savedEvents")) || [];
 //Modal variables
 const modals = document.querySelectorAll(".modal");
 const myEventsModal = document.querySelector("#myevents-modal");
-const modalCloseBtn = myEventsModal.querySelector(".modal__close-button");
 const modalImage = myEventsModal.querySelector(".modal-card__image");
 const modalTitle = myEventsModal.querySelector(".modal-card__info-title");
 const modalTime = myEventsModal.querySelector(".modal-card__info-time");
@@ -15,6 +14,13 @@ const modalDescription = myEventsModal.querySelector(
   ".modal-card__info-description"
 );
 const modalDeleteBtn = myEventsModal.querySelector(".modal-card__delete-btn");
+const deleteModal = document.querySelector("#delete-modal");
+const deleteModalBtn = deleteModal.querySelector(
+  ".delete-modal__button-confirm"
+);
+const cancelModalBtn = deleteModal.querySelector(
+  ".delete-modal__button-cancel"
+);
 
 const savedEventsTitle = document.querySelector(".event-cards__saved-title");
 const noSavedEvents = document.querySelector(".event-card__not-saved");
@@ -93,17 +99,26 @@ modals.forEach((modal) => {
 
 let currentEvent;
 
-function openModal(modal, eventdata) {
+function openModal(modal, event) {
+  currentEvent = event;
   modal.classList.add("modal_is-opened");
-  currentEvent = eventdata;
   document.addEventListener("keydown", handleKeyDown);
-
-  modalDeleteBtn.addEventListener("click", () => {
-    deleteEvent(currentEvent.id);
-    closeModal(myEventsModal);
-    refreshEvents();
-  });
 }
+
+modalDeleteBtn.addEventListener("click", () => {
+  openModal(deleteModal, currentEvent);
+  closeModal(myEventsModal);
+});
+
+deleteModalBtn.addEventListener("click", () => {
+  deleteEvent(currentEvent.id);
+  closeModal(deleteModal);
+  refreshEvents();
+});
+
+cancelModalBtn.addEventListener("click", () => {
+  closeModal(deleteModal);
+});
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");

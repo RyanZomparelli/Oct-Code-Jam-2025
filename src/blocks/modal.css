@@ -29,6 +29,43 @@
   box-sizing: border-box;
 }
 
+.modal__close-button {
+  background-image: url(../assets/close-button-card-modal.svg);
+  background-color: transparent;
+  border: none;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.modal__close-button:hover {
+  opacity: 40%;
+  cursor: pointer;
+}
+
+.modal__close-button_delete {
+  background-image: url(../assets/closebuttondark.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  right: 5px;
+  top: 20px;
+}
+
+.modal__close-button_delete-delete:hover {
+  opacity: 40%;
+  cursor: pointer;
+}
+
+.modal__close-button_confirmation {
+  background-image: none;
+}
+
 .modal__container_card {
   background-color: transparent;
   align-items: center;
@@ -57,6 +94,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 25px;
+  gap: 40px;
 }
 
 .modal-card__info-title {
@@ -107,20 +145,51 @@
   cursor: pointer;
 }
 
-.modal__close-button_card {
-  background-image: url(../assets/close-button-card-modal.svg);
-  background-color: transparent;
-  border: none;
-  height: 40px;
-  width: 40px;
-  position: absolute;
-  right: 10px;
-  top: 10px;
+.delete-modal__content {
+  margin: 0 auto;
+  width: 367px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.delete-modal__text {
+  margin: 60px 0 40px 0;
+  line-height: 24px;
 }
 
-.modal__close-button_card:hover {
-  opacity: 40%;
+.delete-modal__buttons {
+  background: transparent;
+  border: none;
+  transition: opacity 0.2s ease-in-out;
+  line-height: 24px;
+}
+
+.delete-modal__buttons:hover {
   cursor: pointer;
+  opacity: 70%;
+}
+
+.delete-modal__button-confirm {
+  color: red;
+  margin: 0 0 24px 0;
+  padding: 0;
+}
+
+.delete-modal__button-cancel {
+  margin: 0 0 30px 0;
+  padding: 0;
+}
+
+.modal__container-wrapper {
+  height: 125px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-confirmation__info-title {
+  font-size: 30px;
 }
 
 @media screen and (max-width: 718px) {

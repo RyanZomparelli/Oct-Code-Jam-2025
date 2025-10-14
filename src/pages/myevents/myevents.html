@@ -68,25 +68,53 @@
         </div>
         <p class="footer__copyright">&copy; OctCodeJam</p>
       </footer>
-        <div class="modal" id="myevents-modal">
-          <div class="modal__container modal__container_card">
-            <div class="modal__card-wrapper">
-              <button
-                type="button"
-                class="modal__close-button modal__close-button_card"
-              ></button>
-              <img src="#" alt="#" class="modal-card__image" />
-              <div class="modal-card__details">
-                <div class="modal-card__info">
-                  <p class="modal-card__info-title"></p>
-                  <p class="modal-card__info-description"></p>
-                  <p class="modal-card__info-time"></p>
-                </div>
-                <button class="modal-card__delete-btn">Delete</button>
+      <div class="modal" id="myevents-modal">
+        <div class="modal__container modal__container_card">
+          <div class="modal__card-wrapper">
+            <button
+              type="button"
+              class="modal__close-button modal__close-button_card"
+            ></button>
+            <img src="#" alt="#" class="modal-card__image" />
+            <div class="modal-card__details">
+              <div class="modal-card__info">
+                <p class="modal-card__info-title"></p>
+                <p class="modal-card__info-description"></p>
+                <p class="modal-card__info-time"></p>
               </div>
+              <button class="modal-card__delete-btn">Delete</button>
             </div>
           </div>
         </div>
+      </div>
+      <div class="modal" id="delete-modal">
+        <div class="modal__container modal__container_delete-modal">
+          <div class="modal__card-wrapper">
+            <button
+              type="button"
+              class="modal__close-button modal__close-button_delete"
+            ></button>
+            <div class="delete-modal__content">
+              <p class="delete-modal__text">
+                Are you sure you want to delete this item? <br />
+                This action is irreversible
+              </p>
+              <button
+                type="button"
+                class="delete-modal__buttons delete-modal__button-confirm"
+              >
+                Yes, delete item
+              </button>
+              <button
+                type="button"
+                class="delete-modal__buttons delete-modal__button-cancel"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script type="module" src="./myevents.js"></script>
   </body>

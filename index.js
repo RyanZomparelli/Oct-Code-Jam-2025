@@ -16,6 +16,7 @@ const modalTime = cardModal.querySelector(".modal-card__info-time");
 const modalDescription = cardModal.querySelector(
   ".modal-card__info-description"
 );
+const confirmationModal = document.querySelector("#confirmation-modal");
 
 //Filtering Functions
 const filter = document.querySelector(".event-filter");
@@ -111,8 +112,13 @@ let currentEvent;
 function openModal(modal, eventdata) {
   modal.classList.add("modal_is-opened");
   currentEvent = eventdata;
-  saveEventBtn.addEventListener("click", handleSave);
   document.addEventListener("keydown", handleKeyDown);
+
+  if (modal.id === "confirmation-modal") {
+    setTimeout(() => {
+      closeModal(modal);
+    }, 1000);
+  }
 }
 
 function closeModal(modal) {
@@ -127,9 +133,13 @@ const saveEventBtn = document.querySelector(".modal-card__save-btn");
 
 function handleSave() {
   saveEvent(currentEvent);
-  alert("Event saved successfully!");
-  closeModal(cardModal);
 }
+
+saveEventBtn.addEventListener("click", () => {
+  handleSave(currentEvent);
+  openModal(confirmationModal);
+  closeModal(cardModal);
+});
 
 function saveEvent(event) {
   // Prevent duplicates
