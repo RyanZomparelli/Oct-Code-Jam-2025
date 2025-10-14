@@ -16,17 +16,26 @@ const modalDescription = myEventsModal.querySelector(
 );
 const modalDeleteBtn = myEventsModal.querySelector(".modal-card__delete-btn");
 
-if (savedEvents.length === 0) {
-  const message = document.createElement("p");
-  message.textContent = "No saved events yet!";
-  savedContainer.appendChild(message);
-}
+const savedEventsTitle = document.querySelector(".event-cards__saved-title");
+const noSavedEvents = document.querySelector(".event-card__not-saved");
 
 const sortedEvents = [...savedEvents].sort((a, b) => {
   const aDate = new Date(a.time);
   const bDate = new Date(b.time);
   return aDate - bDate;
 });
+
+function renderText(updated) {
+  // const refreshEvents = JSON.parse(localStorage.getItem("savedEvents")) || [];
+  if (updated.length === 0) {
+    noSavedEvents.classList.add("event-card__not-saved_active");
+    savedEventsTitle.classList.remove("event-cards__saved-title_active");
+  } else {
+    noSavedEvents.classList.remove("event-card__not-saved_active");
+    savedEventsTitle.classList.add("event-cards__saved-title_active");
+  }
+}
+renderText(savedEvents);
 
 function getEvents(data) {
   data.forEach((event) => {
@@ -115,4 +124,5 @@ function refreshEvents() {
     (a, b) => new Date(a.time) - new Date(b.time)
   );
   getEvents(sortedUpdated);
+  renderText(updated);
 }

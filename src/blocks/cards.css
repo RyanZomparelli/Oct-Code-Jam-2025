@@ -1,3 +1,12 @@
+.event-cards__saved-title {
+  visibility: hidden;
+  color: white;
+}
+
+.event-cards__saved-title_active {
+  visibility: visible;
+}
+
 .event-cards-list {
   list-style-type: none;
   display: grid;
@@ -13,6 +22,16 @@
     background-color 0.3s ease-in-out;
   border-radius: 20px;
   overflow: hidden;
+}
+
+.event-card__not-saved {
+  visibility: hidden;
+  color: white;
+  text-align: center;
+}
+
+.event-card__not-saved_active {
+  visibility: visible;
 }
 
 .event-card:hover {
