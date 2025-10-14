@@ -1,6 +1,4 @@
-import "./src/blocks/index.css";
 import { events } from "./src/utils/eventdata";
-// import getEvents from "./src/utils/api";
 
 //Card variables
 const cardTemplate = document.querySelector(".event-card-template");
