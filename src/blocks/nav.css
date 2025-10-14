@@ -4,7 +4,7 @@
 .nav__links {
   display: flex;
   list-style: none;
-  gap: 30px;
+  gap: 100px;
   padding: 0;
 }
 
