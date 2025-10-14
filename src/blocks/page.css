@@ -3,11 +3,11 @@
   min-height: 100vh;
   font-family: Creepster, Impact, Haettenschweiler, "Arial Narrow Bold",
     sans-serif;
-  padding: 0px 14px 0 14px;
+  padding: 0px 14px;
 }
 
 .page-content {
-  max-width: 1360px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 40px;
   min-height: 100vh;
