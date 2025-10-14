@@ -9,12 +9,39 @@
   padding: 0 90px;
 }
 
+.event-filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
 .event-filter {
   border-radius: 8px;
   border: none;
   padding: 2px 2px 2px 5px;
   font-size: 14px;
-  margin-bottom: 20px;
   width: 150px;
   align-self: center;
+}
+
+.event-filter__matches {
+  margin: 0;
+}
+
+.current-event-filter {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.current-event-filter-btn {
+  border-radius: 8px;
+  font-size: 14px;
+  border: none;
+  transition: 0.2s color ease-out;
+}
+
+.current-event-filter-btn:hover {
+  cursor: pointer;
+  color: grey;
 }
