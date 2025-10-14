@@ -142,7 +142,7 @@ function openModal(modal, eventdata) {
   if (modal.id === "confirmation-modal") {
     setTimeout(() => {
       closeModal(modal);
-    }, 1000);
+    }, 500);
   }
 }
 
