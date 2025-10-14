@@ -1,6 +1,13 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .footer {
   color: white;
   padding: 20px 0 20px 0;
+  flex-shrink: 0;
 }
 
 .footer__content {
@@ -13,7 +20,6 @@
 .footer__contact-title {
   text-align: center;
   margin: 0;
-  /*make orange*/
 }
 
 .footer__contacts {
@@ -22,7 +28,6 @@
   display: flex;
   gap: 30px;
   list-style: none;
-  /*make zombie (light)green*/
 }
 
 .footer__link {
