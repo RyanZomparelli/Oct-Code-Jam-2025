@@ -18,8 +18,11 @@ const confirmationModal = document.querySelector("#confirmation-modal");
 
 //Filtering Functions
 const filter = document.querySelector(".event-filter");
+const futureFilter = document.querySelector(".current-event-filter__future");
+const pastFilter = document.querySelector(".current-event-filter__past");
+const currentTime = new Date();
 
-function handleMatch(e) {
+function handleFilterMatch() {
   const inputValue = filter.value.toLowerCase();
 
   const matches = events.filter((event) =>
@@ -33,7 +36,31 @@ function renderMatches(matches) {
   getEvents(matches);
 }
 
-filter.addEventListener("input", handleMatch);
+filter.addEventListener("input", handleFilterMatch);
+
+function handleFutureMatch() {
+  const futureMatches = events.filter((event) => {
+    const eventTime = new Date(event.time);
+    if (eventTime > currentTime) {
+      return event;
+    }
+  });
+  renderMatches(futureMatches);
+}
+
+futureFilter.addEventListener("click", handleFutureMatch);
+
+function handlePastMatch() {
+  const futureMatches = events.filter((event) => {
+    const eventTime = new Date(event.time);
+    if (eventTime < currentTime) {
+      return event;
+    }
+  });
+  renderMatches(futureMatches);
+}
+
+pastFilter.addEventListener("click", handlePastMatch);
 
 //Card Functions
 //Sort events by date
