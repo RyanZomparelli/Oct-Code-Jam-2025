@@ -42,12 +42,10 @@ function renderCalendar() {
     for (let event = 0; event < events.length; event++) {
       let eventTime = events[event].time;
       let eventName = events[event].title;
-      let eventId = events[event].id;
-      // let eventDescription = events[event].description;
-      // let eventImage = events[event].image;
       let eventDate = new Date(eventTime);
       let eventMonth = eventDate.getMonth();
       let eventYear = eventDate.getFullYear();
+      console.log(events[event].event);
       if (
         eventDate.getDate() === dayNum &&
         eventMonth === month &&
@@ -67,18 +65,21 @@ function renderCalendar() {
         const eventModalTime = eventCardModal.querySelector(
           ".modal-card__info-time"
         );
-        eventTitle.textContent = eventName;
-        dayDiv.appendChild(eventBanner);
-        eventBanner;
 
-        eventTitle.addEventListener("click", () => {
-          eventModalImage.src = event.image;
-          eventModalImage.alt = event.title;
-          eventModalTitle.textContent = event.title;
-          eventModalTime.textContent = event.time;
-          eventModalDescription.textContent = event.description;
-          openModal(eventCardModal, eventId);
+        eventTitle.textContent = eventName;
+
+        eventBanner.addEventListener("click", () => {
+          // eventModalImage.src = ;
+          //   eventModalImage.alt = ;
+          //   eventModalTitle.textContent = ;
+          //     eventName;
+          // eventModalTime.textContent = eventTime;
+          // eventModalDescription.textContent = eventDescription;
+          // console.log(eventModalTitle);
+          openModal(eventCardModal, event);
         });
+
+        dayDiv.appendChild(eventBanner);
       }
     }
 
@@ -106,8 +107,11 @@ function renderCalendar() {
   }
 }
 
-function openModal(modal) {
-  modal.classList.add("modal__is-opened");
+let currentEvent;
+
+function openModal(modal, eventData) {
+  modal.classList.add("modal_is-opened");
+  currentEvent = eventData;
 }
 
 prevBtn.addEventListener("click", () => {
