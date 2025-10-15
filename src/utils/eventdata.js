@@ -4,7 +4,7 @@ export const events = [
     image:
       "https://images.unsplash.com/photo-1508361001413-7a9dca21d08a?crop=entropy&cs=tinysrgb&fit=max&w=900&q=60",
     title: "Pumpkin Carving Madness",
-    time: "October 25, 2025 3:00 PM",
+    time: "October 18, 2025 3:00 PM",
     description: "Come for a pumpkin carving contest and win prizes",
   },
   {
@@ -38,7 +38,7 @@ export const events = [
     image:
       "https://images.unsplash.com/photo-1635100431192-180372735b06?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aGFsbG93ZWVuJTIwbW92aWV8ZW58MHx8MHx8fDI%3D&auto=format&fit=crop&q=60&w=900",
     title: "Spooky Movie Marathon",
-    time: "October 18, 2025 7:00 PM",
+    time: "October 11, 2025 7:00 PM",
     description: "Watch classic Halloween horror movies under the stars",
   },
   {
@@ -62,7 +62,7 @@ export const events = [
     image:
       "https://images.unsplash.com/photo-1509163245925-f4255dea7727?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNvc3R1bWUlMjBjb250ZXN0fGVufDB8fDB8fHwy&auto=format&fit=crop&q=60&w=900",
     title: "Costume Contest",
-    time: "October 21, 2025 6:00 PM",
+    time: "October 25, 2025 6:00 PM",
     description: "Show off your best Halloween costume and win prizes",
   },
   {
@@ -78,7 +78,7 @@ export const events = [
     image:
       "https://images.unsplash.com/photo-1700712543597-65321b4fa321?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGhhbGxvd2VlbiUyMHBhcmFkZXxlbnwwfHwwfHx8Mg%3D%3D&auto=format&fit=crop&q=60&w=900",
     title: "Halloween Parade",
-    time: "October 23, 2025 3:00 PM",
+    time: "October 26, 2025 3:00 PM",
     description: "Join the community parade with spooky floats and costumes",
   },
   {
@@ -94,7 +94,7 @@ export const events = [
     image:
       "https://images.unsplash.com/photo-1508931133503-b1944a4ecdd5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8d2l0Y2h8ZW58MHx8MHx8fDI%3D&auto=format&fit=crop&q=60&w=900",
     title: "Witchcraft Workshop",
-    time: "October 25, 2025 6:30 PM",
+    time: "October 15, 2025 6:30 PM",
     description:
       "Learn fun and safe Halloween magic tricks for kids and adults",
   },
@@ -119,7 +119,7 @@ export const events = [
     image:
       "https://images.unsplash.com/photo-1667355742851-337d48ed6c39?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aGFsbG93ZWVuJTIwZGFuY2V8ZW58MHx8MHx8fDI%3D&auto=format&fit=crop&q=60&w=900",
     title: "Monster Dance Party",
-    time: "October 28, 2025 8:00 PM",
+    time: "October 25, 2025 8:00 PM",
     description: "Dance the night away with monster-themed music and drinks",
   },
   {
