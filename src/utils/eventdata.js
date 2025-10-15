@@ -154,4 +154,58 @@ export const events = [
     time: "October 31, 2025 8:00 PM",
     description: "Final trick-or-treating event of the season with prizes",
   },
+  {
+    id: 19,
+    image:
+      "https://images.unsplash.com/photo-1680573095538-b41f50e04412?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGlhJTIwZGUlMjBsb3MlMjBtdWVydG9zfGVufDB8fDB8fHwy&auto=format&fit=crop&q=60&w=900",
+    title: "Dia De Los Muertos",
+    time: "November 1, 2025 6:00 PM",
+    description:
+      "Celebrate the day of the dead at the famous Hollywood Forever Cemetery",
+  },
+  {
+    id: 20,
+    image:
+      "https://images.unsplash.com/photo-1687199126330-556bb3c85b2f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGFydmVzdCUyMG1hcmtldHxlbnwwfHwwfHx8Mg%3D%3D&auto=format&fit=crop&q=60&w=900",
+    title: "Autumn Harvest Market",
+    time: "October 2, 2025 10:00 AM",
+    description:
+      "Shop local produce, handmade goods, and fall treats at the annual harvest market downtown",
+  },
+  {
+    id: 21,
+    image:
+      "https://images.unsplash.com/photo-1584225064785-c62a8b43d148?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2lkZXIlMjB0YXN0aW5nfGVufDB8fDB8fHwy&auto=format&fit=crop&q=60&w=900",
+    title: "Cider Tasting & Bonfire",
+    time: "October 3, 2025 6:00 PM",
+    description:
+      "Sample seasonal ciders by the fire and enjoy live acoustic music under the stars",
+  },
+  {
+    id: 22,
+    image:
+      "https://images.unsplash.com/photo-1759802758378-652ad96482ab?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29tbXVuaXR5JTIwYXJ0JTIwd2Fsa3xlbnwwfHwwfHx8Mg%3D%3D&auto=format&fit=crop&q=60&w=900",
+    title: "Fall Art Walk",
+    time: "October 4, 2025 5:00 PM",
+    description:
+      "Local artists showcase their autumn-themed works across Main Street galleries",
+  },
+  {
+    id: 23,
+    image:
+      "https://images.unsplash.com/photo-1679948000740-8f557782a515?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNyYWZ0JTIwYmVlciUyMGdhcmRlbnxlbnwwfHwwfHx8Mg%3D%3D&auto=format&fit=crop&q=60&w=900",
+    title: "Brew & Stew Festival",
+    time: "October 5, 2025 12:00 PM",
+    description:
+      "Enjoy craft beer, chili cook-offs, and cozy fall vibes at the annual Brew & Stew fest",
+  },
+  {
+    id: 24,
+    image:
+      "https://images.unsplash.com/photo-1661078226424-28f190c723e0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8b2t0b2JlcmZlc3R8ZW58MHx8MHx8fDI%3D&auto=format&fit=crop&q=60&w=900",
+    title: "Oktoberfest Celebration",
+    time: "October 6, 2025 2:00 PM",
+    description:
+      "Celebrate Oktoberfest with live polka, pretzels, and steins of local brews",
+  },
 ];
