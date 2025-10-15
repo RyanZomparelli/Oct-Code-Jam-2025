@@ -30,6 +30,7 @@
   display: flex;
   gap: 10px;
   justify-content: center;
+  align-items: center;
 }
 
 .current-event-filter-btn {
@@ -42,4 +43,14 @@
 .current-event-filter-btn:hover {
   cursor: pointer;
   color: grey;
+}
+
+.current-event-filter__clear {
+  background: transparent;
+  background-image: url(../assets/close-button-card-modal.svg);
+  height: 19px;
+  width: 19px;
+  margin: 0;
+  padding: 0;
+  background-position: center;
 }
