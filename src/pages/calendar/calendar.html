@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="../index.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../blocks/index.css" />
@@ -80,6 +79,25 @@
           <h3 class="calendar__event-name"></h3>
         </div>
       </template>
+      <div class="modal" id="card-modal">
+        <div class="modal__container modal__container_card">
+          <div class="modal__card-wrapper">
+            <button
+              type="button"
+              class="modal__close-button modal__close-button_card"
+            ></button>
+            <img src="#" alt="#" class="modal-card__image" />
+            <div class="modal-card__details">
+              <div class="modal-card__info">
+                <p class="modal-card__info-title"></p>
+                <p class="modal-card__info-description"></p>
+                <p class="modal-card__info-time"></p>
+              </div>
+              <button class="modal-card__save-btn">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script type="module" src="./calendar.js"></script>
   </body>

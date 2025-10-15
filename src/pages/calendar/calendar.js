@@ -42,6 +42,9 @@ function renderCalendar() {
     for (let event = 0; event < events.length; event++) {
       let eventTime = events[event].time;
       let eventName = events[event].title;
+      let eventId = events[event].id;
+      // let eventDescription = events[event].description;
+      // let eventImage = events[event].image;
       let eventDate = new Date(eventTime);
       let eventMonth = eventDate.getMonth();
       let eventYear = eventDate.getFullYear();
@@ -52,8 +55,30 @@ function renderCalendar() {
       ) {
         const eventBanner = eventTemplate.content.cloneNode(true);
         const eventTitle = eventBanner.querySelector(".calendar__event-name");
+        const eventCardModal = document.getElementById("card-modal");
+        const eventModalTitle = eventCardModal.querySelector(
+          ".modal-card__info-title"
+        );
+        const eventModalDescription = eventCardModal.querySelector(
+          ".modal-card__info-description"
+        );
+        const eventModalImage =
+          eventCardModal.querySelector(".modal-card__image");
+        const eventModalTime = eventCardModal.querySelector(
+          ".modal-card__info-time"
+        );
         eventTitle.textContent = eventName;
         dayDiv.appendChild(eventBanner);
+        eventBanner;
+
+        eventTitle.addEventListener("click", () => {
+          eventModalImage.src = event.image;
+          eventModalImage.alt = event.title;
+          eventModalTitle.textContent = event.title;
+          eventModalTime.textContent = event.time;
+          eventModalDescription.textContent = event.description;
+          openModal(eventCardModal, eventId);
+        });
       }
     }
 
@@ -65,10 +90,10 @@ function renderCalendar() {
 
     if (isToday) dayDiv.classList.add("calendar__today");
 
-    // add a click event to each day
-    dayDiv.addEventListener("click", () => {
-      console.log(`You clicked on ${dayNum} ${month} ${year}`);
-    });
+    // // add a click event to each event
+    // dayDiv.addEventListener("click", () => {
+    //   console.log(`You clicked on ${dayNum} ${month} ${year}`);
+    // });
 
     daysContainer.appendChild(dayNode);
   }
@@ -79,6 +104,10 @@ function renderCalendar() {
     dayTemplate.classList.add("calendar__empty-day");
     daysContainer.appendChild(empty);
   }
+}
+
+function openModal(modal) {
+  modal.classList.add("modal__is-opened");
 }
 
 prevBtn.addEventListener("click", () => {
