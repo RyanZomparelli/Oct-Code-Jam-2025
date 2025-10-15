@@ -16,8 +16,10 @@ This project was created as part of the TripleTen Software Engineering Bootcamp 
 We have developed a Hauntquest site that allows users to see local events.
 
 - The homepage lists out the events, sorted by date. Users can click on an event and 'save' it, adding it to their My Events page.
+- The homepage also features a filter to filter by name, as well as filter buttons to filter for current and past events.
 - The Calendar page shows the events in calendar format. Users can click on the event in the calendar and 'save' it, adding it to their My Events page.
 - The My Events page lists all of the events that the user has saved.
+- Images courtesty of unsplash
 
 **Technologies & Techniques**
 
