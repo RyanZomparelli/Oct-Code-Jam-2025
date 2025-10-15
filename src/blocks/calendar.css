@@ -68,3 +68,11 @@
   background: rgb(27, 213, 17);
   color: #fff;
 }
+
+.calendar__event-name {
+  font-size: 14px;
+}
+
+.calendar__event-name:hover {
+  opacity: 60%;
+}
