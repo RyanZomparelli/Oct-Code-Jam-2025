@@ -5,8 +5,9 @@
 }
 
 .calendar {
-  height: 1000px;
-  width: 100vh;
+  /* height: 100%; */
+  width: 100%;
+  max-width: 1200px;
   background: #fff;
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -32,7 +33,6 @@
 .calendar__empty-day {
   background-image: url(./imgs/spiderweb.jpg);
   background-repeat: no-repeat;
-
   background-size: contain;
 }
 
@@ -67,4 +67,10 @@
 .calendar__today {
   background: rgb(27, 213, 17);
   color: #fff;
+}
+
+@media (max-width: 1100px) {
+  .calendar {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
