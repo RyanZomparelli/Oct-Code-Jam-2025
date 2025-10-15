@@ -7,6 +7,7 @@ const dayTemplate = document.getElementById("day-template");
 const eventTemplate = document.getElementById("event-banner");
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
+const weekdays = document.querySelector(".calendar__weekdays");
 
 const modals = document.querySelectorAll(".modal");
 const confirmationModal = document.getElementById("card-modal");

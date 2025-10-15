@@ -53,7 +53,7 @@
 .calendar__day {
   height: 150px;
   color: orangered;
-  padding: 15px 30px;
+  padding: 15px 15px;
   background-color: purple;
   cursor: pointer;
   transition: background 0.3s;
@@ -67,4 +67,18 @@
 .calendar__today {
   background: rgb(27, 213, 17);
   color: #fff;
+}
+
+.calendar__event-name {
+  font-size: 14px;
+}
+
+.calendar__event-name:hover {
+  opacity: 60%;
+}
+
+@media screen and (max-width: 1280px) {
+  .calendar__weekdays {
+    display: none;
+  }
 }
