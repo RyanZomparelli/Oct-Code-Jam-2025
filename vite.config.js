@@ -7,8 +7,9 @@ export default {
   build: {
     rollupOptions: {
       input: {
-        calendar: resolve(__dirname, "src/pages/calendar/calendar.html"),
-        myEvents: resolve(__dirname, "src/pages/myevents/myevents.html"),
+        home: "index.html",
+        calendar: "./src/pages/calendar/calendar.html",
+        myEvents: "./src/pages/myevents/myevents.html",
       },
     },
   },
