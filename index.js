@@ -149,7 +149,7 @@ function openModal(modal, eventdata) {
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
   document.removeEventListener("keydown", handleKeyDown);
-  saveEventBtn.removeEventListener("click", handleSave);
+  saveEventBtn.removeEventListener("click", saveEvent);
 }
 
 // My Events
