@@ -35,12 +35,13 @@ function renderCalendar() {
   for (let dayNum = 1; dayNum <= lastDay.getDate(); dayNum++) {
     const dayNode = dayTemplate.content.cloneNode(true);
     const dayDiv = dayNode.querySelector(".calendar__day");
-    dayDiv.textContent = dayNum; // Set the number
+    const numberSpanEl = dayDiv.querySelector(".calendar__day-number");
+    numberSpanEl.textContent = dayNum; // Set the number
 
     // checking if event is on day and generating
     for (let event = 0; event < events.length; event++) {
       let eventTime = events[event].time;
-      let eventName = events[event].name;
+      let eventName = events[event].title;
       let eventDate = new Date(eventTime);
       let eventMonth = eventDate.getMonth();
       let eventYear = eventDate.getFullYear();
@@ -52,7 +53,7 @@ function renderCalendar() {
         const eventBanner = eventTemplate.content.cloneNode(true);
         const eventTitle = eventBanner.querySelector(".calendar__event-name");
         eventTitle.textContent = eventName;
-        dayNode.appendChild(eventBanner);
+        dayDiv.appendChild(eventBanner);
       }
     }
 
