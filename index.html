@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/assets/favicon-CEH5g9fb.png" />
+    <title>HauntQuest</title>
+    <script type="module" crossorigin src="/assets/home-BhOp6fNE.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/index-B92HQrkF.js">
+    <link rel="modulepreload" crossorigin href="/assets/eventdata-bFFFpd5i.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-BPS0MTET.css">
+  </head>
+  <body>
+    <div class="page">
+      <div class="page-content">
+      <header class="header">
+        <div class="header__logo-container">
+          <img
+            class="header__logo"
+            src="/assets/favicon-CEH5g9fb.png"
+            alt="Spooky Logo"
+          />
+          <h1 class="header__title">HauntQuest</h1>
+        </div>
+        <nav class="nav">
+          <ul class="nav__links">
+            <li><a href="./index.html" class="nav__link">Home</a></li>
+            <li>
+              <a href="./src/pages/calendar/calendar.html" class="nav__link"
+                >Calendar</a
+              >
+            </li>
+            <li>
+              <a href="./src/pages/myevents/myevents.html" class="nav__link"
+                >My Events</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <div class="event-filters">
+          <input
+            class="event-filter"
+            name="event-filter"
+            type="search"
+            placeholder="Search events"
+          />
+          <ul class="event-filter__matches"></ul>
+          <div class="current-event-filter">
+            <button
+              class="current-event-filter-btn current-event-filter__future"
+            >
+              Future Events
+            </button>
+            <button class="current-event-filter-btn current-event-filter__past">
+              Past Events
+            </button>
+            <button class="current-event-filter-btn current-event-filter__clear">
+            </button>
+          </div>
+        </div>
+        <section class="event-cards">
+          <ul class="event-cards-list">
+            <template class="event-card-template">
+              <li class="event-card">
+                <img src="#" alt="#" class="event-card__image" />
+                <div class="event-card__info">
+                  <p class="event-card__info-title"></p>
+                  <p class="event-card__info-description"></p>
+                  <p class="event-card__info-time"></p>
+                </div>
+              </li>
+            </template>
+          </ul>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__content">
+          <div class="footer_contact-container">
+            <h3 class="footer__contact-title">Contact Us</h3>
+            <ul class="footer__contacts">
+              <li class="footer__contact">
+                <a
+                  href="https://www.linkedin.com/in/jaimiebowen/"
+                  class="footer__link"
+                  >Jamie Bowen</a
+                >
+              </li>
+              <li class="footer__contact">
+                <a
+                  href="https://www.linkedin.com/in/ryan-zomparelli/"
+                  class="footer__link"
+                  >Ryan Zomparelli</a
+                >
+              </li>
+              <li class="footer__contact">
+                <a
+                  href="https://www.linkedin.com/in/seth-taylor2001/"
+                  class="footer__link"
+                  >Seth Taylor</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="footer__copyright">&copy; Hauntquest</p>
+      </footer>
+      <div class="modal" id="card-modal">
+        <div class="modal__container modal__container_card">
+          <div class="modal__card-wrapper">
+            <button
+              type="button"
+              class="modal__close-button modal__close-button_card"
+            ></button>
+            <img src="#" alt="#" class="modal-card__image" />
+            <div class="modal-card__details">
+              <div class="modal-card__info">
+                <p class="modal-card__info-title"></p>
+                <p class="modal-card__info-description"></p>
+                <p class="modal-card__info-time"></p>
+              </div>
+              <button class="modal-card__save-btn">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="confirmation-modal">
+        <div class="modal__container modal__container_confirmation">
+          <div class="modal__card-wrapper modal__container-wrapper">
+            <div class="modal-confirmation__details">
+              <p class="modal-confirmation__info-title">Event Saved</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
