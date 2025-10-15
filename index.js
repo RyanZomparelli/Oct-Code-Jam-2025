@@ -156,12 +156,8 @@ function closeModal(modal) {
 
 const saveEventBtn = document.querySelector(".modal-card__save-btn");
 
-function handleSave() {
-  saveEvent(currentEvent);
-}
-
 saveEventBtn.addEventListener("click", () => {
-  handleSave(currentEvent);
+  saveEvent(currentEvent);
   openModal(confirmationModal);
   closeModal(cardModal);
 });
