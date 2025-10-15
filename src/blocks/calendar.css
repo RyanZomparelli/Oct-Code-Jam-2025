@@ -32,7 +32,6 @@
 .calendar__empty-day {
   background-image: url(./imgs/spiderweb.jpg);
   background-repeat: no-repeat;
-
   background-size: contain;
 }
 

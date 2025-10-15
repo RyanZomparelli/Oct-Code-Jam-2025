@@ -35,7 +35,9 @@
       <main class="calendar__container">
         <div class="calendar">
           <div class="calendar__header">
+            <button class="calendar__button" id="prev">&#10094;</button>
             <h2 class="calander__month-year" id="month-year"></h2>
+            <button class="calendar__button" id="next">&#10095;</button>
           </div>
           <div class="calendar__weekdays">
             <div class="calendar__weekdays-name">Sun</div>
@@ -71,7 +73,11 @@
       <template id="day-template">
         <div class="calendar__day">
           <span class="calendar__day-number"></span>
-          <div class="calendar__day-event"></div>
+        </div>
+      </template>
+      <template id="event-banner">
+        <div class="calendar__day-event">
+          <h3 class="calendar__event-name"></h3>
         </div>
       </template>
     </div>
