@@ -8,6 +8,10 @@ const eventTemplate = document.getElementById("event-banner");
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
 
+const modals = document.querySelectorAll(".modal");
+const confirmationModal = document.getElementById("card-modal");
+const cardModal = document.querySelector("#card-modal");
+
 let date = new Date();
 
 function renderCalendar() {
@@ -45,7 +49,6 @@ function renderCalendar() {
       let eventDate = new Date(eventTime);
       let eventMonth = eventDate.getMonth();
       let eventYear = eventDate.getFullYear();
-      console.log(events[event].event);
       if (
         eventDate.getDate() === dayNum &&
         eventMonth === month &&
@@ -54,6 +57,9 @@ function renderCalendar() {
         const eventBanner = eventTemplate.content.cloneNode(true);
         const eventTitle = eventBanner.querySelector(".calendar__event-name");
         const eventCardModal = document.getElementById("card-modal");
+        const modalCloseBtn = eventCardModal.querySelector(
+          ".modal__close-button"
+        );
         const eventModalTitle = eventCardModal.querySelector(
           ".modal-card__info-title"
         );
@@ -68,15 +74,18 @@ function renderCalendar() {
 
         eventTitle.textContent = eventName;
 
-        eventBanner.addEventListener("click", () => {
-          // eventModalImage.src = ;
-          //   eventModalImage.alt = ;
-          //   eventModalTitle.textContent = ;
-          //     eventName;
-          // eventModalTime.textContent = eventTime;
-          // eventModalDescription.textContent = eventDescription;
-          // console.log(eventModalTitle);
-          openModal(eventCardModal, event);
+        eventTitle.addEventListener("click", () => {
+          eventModalImage.src = events[event].image;
+          eventModalImage.alt = events[event].title;
+          eventModalTitle.textContent = events[event].title;
+          eventModalTime.textContent = events[event].time;
+          eventModalDescription.textContent = events[event].description;
+
+          openModal(eventCardModal, events[event]);
+        });
+
+        modalCloseBtn.addEventListener("click", () => {
+          closeModal(eventCardModal);
         });
 
         dayDiv.appendChild(eventBanner);
@@ -107,11 +116,75 @@ function renderCalendar() {
   }
 }
 
+//Handle keydown event Escape close
+function handleKeyDown(e) {
+  modals.forEach((modal) => {
+    if (e.key === "Escape") {
+      closeModal(modal);
+    }
+  });
+}
+
+modals.forEach((modal) => {
+  modal.addEventListener("click", function (evt) {
+    if (
+      evt.target.classList.contains("modal__close-button") ||
+      evt.target.classList.contains("modal")
+    ) {
+      closeModal(modal);
+    }
+  });
+});
+
 let currentEvent;
 
-function openModal(modal, eventData) {
+function openModal(modal, eventdata) {
   modal.classList.add("modal_is-opened");
-  currentEvent = eventData;
+  currentEvent = eventdata;
+  document.addEventListener("keydown", handleKeyDown);
+
+  if (modal.id === "confirmation-modal") {
+    setTimeout(() => {
+      closeModal(modal);
+    }, 500);
+  }
+}
+
+const saveEventBtn = document.querySelector(".modal-card__save-btn");
+
+function closeModal(modal) {
+  cardModal.classList.remove("modal_is-opened");
+  document.removeEventListener("keydown", handleKeyDown);
+  saveEventBtn.removeEventListener("click", saveEvent);
+}
+
+// My Events
+
+saveEventBtn.addEventListener("click", () => {
+  saveEvent(currentEvent);
+  openModal(confirmationModal);
+  closeModal(modals);
+});
+
+function saveEvent(event) {
+  // Prevent duplicates
+  // Get the currently saved items from local storage.
+  // If there are no items getItem return null so the empty array ensures we always have
+  // an empty array to work with and we can use array methods like .some().
+  const saved = JSON.parse(localStorage.getItem("savedEvents")) || [];
+
+  // See if the title from our event matches any title already in local storage.
+  const exists = saved.some((events) => events.title === event.title);
+
+  // If the event doesn't exist in local storage save it.
+  if (!exists) {
+    // Add the event to the saved array from above.
+    saved.push(event);
+    // Using the setItem method on the global localStorage object.
+    // It only takes strings and saves a json object like this:
+    // '{'savedEvents': 'event'}'
+    localStorage.setItem("savedEvents", JSON.stringify(saved));
+  }
 }
 
 prevBtn.addEventListener("click", () => {
