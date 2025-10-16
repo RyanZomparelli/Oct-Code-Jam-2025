@@ -45,4 +45,4 @@ We have developed a Hauntquest site that allows users to see local events.
 **Final Project**
 
 - [Link to live project](https://ryanzomparelli.github.io/Oct-Code-Jam-2025/index.html)
-- Recorded overview of project: (To Be Updated)
+- [Recorded overview of project](https://youtu.be/5fchpX5wzDc)
