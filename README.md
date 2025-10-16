@@ -39,7 +39,7 @@ We have developed a Hauntquest site that allows users to see local events.
 **Team Contributions**
 
 - **Jaimie Bowen**: Event data, event card rendering, event and confirmation modals, event filtering, responsive design
-- **Ryan Zomparelli**:
+- **Ryan Zomparelli**: Overall page design(font/colors), saving/updating local storage, deploymemt/configuration
 - **Seth Taylor**: calendar and calendar rendering, calender event rendering, inital vite set up
 
 **Final Project**
