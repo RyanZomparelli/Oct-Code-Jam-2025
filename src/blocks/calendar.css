@@ -23,17 +23,8 @@
   padding: 5px 10px;
 }
 
-.calendar__days {
-  background-image: url(./imgs/spiderweb.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .calendar__empty-day {
-  background-image: url(./imgs/spiderweb.jpg);
   background-color: purple;
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 
 .calendar__weekdays,

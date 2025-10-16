@@ -143,6 +143,7 @@ function openModal(modal, eventdata) {
   modal.classList.add("modal_is-opened");
   currentEvent = eventdata;
   document.addEventListener("keydown", handleKeyDown);
+  console.log(modal.id);
 
   if (modal.id === "confirmation-modal") {
     setTimeout(() => {
@@ -154,7 +155,7 @@ function openModal(modal, eventdata) {
 const saveEventBtn = document.querySelector(".modal-card__save-btn");
 
 function closeModal(modal) {
-  cardModal.classList.remove("modal_is-opened");
+  modal.classList.remove("modal_is-opened");
   document.removeEventListener("keydown", handleKeyDown);
   saveEventBtn.removeEventListener("click", saveEvent);
 }
@@ -163,8 +164,8 @@ function closeModal(modal) {
 
 saveEventBtn.addEventListener("click", () => {
   saveEvent(currentEvent);
+  closeModal(cardModal);
   openModal(confirmationModal);
-  closeModal(modals);
 });
 
 function saveEvent(event) {
