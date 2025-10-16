@@ -154,11 +154,11 @@ function openModal(modal, eventdata) {
   currentEvent = eventdata;
   document.addEventListener("keydown", handleKeyDown);
 
-  if (modal.id === "confirmation-modal") {
-    setTimeout(() => {
-      closeModal(modal);
-    }, 500);
-  }
+  // if (modal.id === "confirmation-modal") {
+  //   setTimeout(() => {
+  //     closeModal(modal);
+  //   }, 500);
+  // }
 }
 
 function closeModal(modal) {

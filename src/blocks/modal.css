@@ -191,6 +191,7 @@
 
 .modal-confirmation__info-title {
   font-size: 30px;
+  text-align: center;
 }
 
 @media screen and (max-width: 718px) {
