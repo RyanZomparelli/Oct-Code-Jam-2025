@@ -10,7 +10,7 @@ const nextBtn = document.getElementById("next");
 const weekdays = document.querySelector(".calendar__weekdays");
 
 const modals = document.querySelectorAll(".modal");
-const confirmationModal = document.getElementById("card-modal");
+const confirmationModal = document.getElementById("confirmation-modal");
 const cardModal = document.querySelector("#card-modal");
 
 let date = new Date();
